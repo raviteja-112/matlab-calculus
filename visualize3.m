@@ -1,0 +1,17 @@
+syms y;
+f = input('Enter the right curve f(y):');
+g = input('Enter the left curve g(y):');
+l = input('Enter the limits [a,b]');
+a = l(1);
+b = l(2);
+y1 = linspace(a,b,20);
+y2 = y1;
+x1 = subs(f,y,y1);
+x2 = subs(g,y,y2);
+plot(x1,y1);
+hold on;
+plot(x2,y2);
+xlabel('x-axis');
+ylabel('y-axis');
+legend('f(y)','g(y)');
+grid on;
